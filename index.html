@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CTPS — Untuk Hidup Sehat</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-theme="light">
+  <!-- NAVBAR -->
+  <header>
+    <nav class="navbar container">
+      <div class="brand">
+        <div class="logo">🧼</div>
+        <div>
+          <div style="font-size:14px">CTPS</div>
+          <div style="font-size:12px;color:var(--muted);font-weight:500">UNTUK HIDUP SEHAT</div>
+        </div>
+      </div>
+
+      <div class="nav-links" id="navLinks">
+        <a href="#" data-section="home">Home</a>
+        <a href="#" data-section="materi">Materi</a>
+        <a href="#" data-section="langkah">Langkah</a>
+        <a href="#" data-section="tips">Tips</a>
+        <a href="#" data-section="quiz">Quiz</a>
+        <a href="#" data-section="video">Video</a>
+        <a href="#" data-section="tentang">Tentang</a>
+      </div>
+
+      <div class="controls">
+        <div class="toggle" id="themeToggle" title="Ganti Mode">
+          <div style="font-size:12px;font-weight:700;color:var(--muted)">Mode</div>
+          <div class="dot"></div>
+        </div>
+        <button class="hamburger" id="hambtn" aria-label="Open Menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HOME -->
+    <section id="home" class="section active">
+      <div class="hero container">
+        <h1>CTPS — Cuci Tangan Pakai Sabun</h1>
+        <p>Praktik sederhana yang menyelamatkan nyawa semua umur.<br><b>Your Hygiene, Your Health</b></p>
+        <div class="cta">
+          <button class="btn btn-primary" id="simBtn">Mulai Simulasi 20s</button>
+          <button class="btn btn-outline" id="openQuizBtn">Kerjakan Quiz</button>
+        </div>
+        <div class="sim-row">
+          <div class="progress-wrap">
+            <div class="progress-bar" id="simProgress"></div>
+          </div>
+          <div id="simTime" class="small">20s</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MATERI -->
+    <section id="materi" class="section hidden container">
+      <div class="card">
+        <h2>Apa Itu CTPS?</h2>
+        <p>CTPS adalah kegiatan mencuci tangan menggunakan air bersih mengalir dan sabun pada waktu penting untuk mencegah penyebaran penyakit.</p>
+        <div class="grid cards-3" style="margin-top:14px">
+          <div class="card tip"><h3>🧼 Bersih dari Kuman</h3><p>Mengurangi kuman penyebab penyakit.</p></div>
+          <div class="card tip"><h3>👨‍👩‍👧 Untuk Semua Umur</h3><p>Dari anak-anak hingga lansia.</p></div>
+          <div class="card tip"><h3>🌍 Hidup Lebih Sehat</h3><p>Kebiasaan kecil berdampak besar.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LANGKAH -->
+    <section id="langkah" class="section hidden container">
+      <div class="card">
+        <h2>Tata Cara CTPS (WHO)</h2>
+        <ol>
+          <li>Basahi tangan dengan air bersih mengalir.</li>
+          <li>Gunakan sabun secukupnya.</li>
+          <li>Gosok telapak, punggung, sela jari, dan kuku ±20 detik.</li>
+          <li>Bilas hingga bersih.</li>
+          <li>Keringkan dengan handuk bersih.</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- TIPS -->
+    <section id="tips" class="section hidden container">
+      <div class="card">
+        <h2>Kapan Harus Cuci Tangan & Tips</h2>
+        <div class="quick">
+          <div class="tip">
+            <h3>🕒 Kapan?</h3>
+            <ul>
+              <li>Sebelum makan</li>
+              <li>Setelah dari toilet</li>
+              <li>Setelah memegang hewan</li>
+              <li>Setelah batuk/bersin</li>
+            </ul>
+          </div>
+          <div class="tip">
+            <h3>💡 Tips Praktis</h3>
+            <ul>
+              <li>Bawa sabun cair kecil saat bepergian</li>
+              <li>Ajarkan anak mencuci tangan dengan lagu 20 detik</li>
+              <li>Gunakan hand sanitizer jika tidak ada air</li>
+            </ul>
+          </div>
+        </div>
+        <div class="fun-fact"><b>Fun Fact:</b> Mencuci tangan 20 detik menurunkan risiko diare hingga 40%!</div>
+      </div>
+    </section>
+
+    <!-- QUIZ -->
+    <section id="quiz" class="section hidden container">
+      <div class="card quiz-box">
+        <h2>Quiz CTPS</h2>
+        <div id="quizContent">
+          <p id="timerText" class="small">Waktu: <span id="timerNum">20</span>s</p>
+          <p id="question">Klik <b>Mulai</b> untuk memulai quiz.</p>
+          <div id="options"></div>
+          <div class="quiz-btn">
+            <button id="startQuizBtn" class="btn btn-primary">Mulai</button>
+            <button id="restartQuizBtn" class="replay" style="display:none">Ulangi Quiz</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIDEO -->
+    <section id="video" class="section hidden container">
+      <div class="card">
+        <h2>🎥 Video Edukasi CTPS</h2>
+        <iframe src="https://www.youtube.com/embed/nH14sS3pWUo" allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <!-- TENTANG -->
+    <section id="tentang" class="section hidden container">
+      <div class="card">
+        <h2>Tentang Aplikasi</h2>
+        <p>Aplikasi ini dibuat untuk edukasi kebersihan tangan dan kesehatan masyarakat berdasarkan panduan WHO & Kemenkes.</p>
+      </div>
+    </section>
+
+    <footer>
+      <p>“CTPS, langkah kecil yang menyelamatkan banyak jiwa.”</p>
+      <p>© <span id="year"></span> CTPS Untuk Hidup Sehat</p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
